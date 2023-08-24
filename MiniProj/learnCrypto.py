@@ -9,7 +9,7 @@ __doc__ = '''Welcome to the world of Cryptography.\nHere we will explore the bas
 print(__doc__)
 print(10 * "******")
 
-# reverse cipher
+# reverse cipher (plain message)
 def reverse_cipher(msg):
     translated = '' # to store the cipher text
     i = len(msg) - 1
@@ -20,9 +20,18 @@ def reverse_cipher(msg):
 
     print(f"The cipher text is : {translated}")
 
-# Caesar cipher
-def caesar_cipher(msg):
-    pass
+# Caesar cipher (plain message and shift pattern)
+def caesar_cipher(msg, sp): 
+   result = '' # to store the cipher text
+   for i in range(len(msg)):
+       char = msg[i]
+       if (char.isupper()):
+           result += chr((ord(char) + sp - 65) % 26 + 65) # encrypt upper case letters
+       else:
+           result += chr((ord(char) + sp - 97) % 26 + 97) # encrypt lower case letters
+       
+   print(result)
+
 
 # ROT 13
 def rot13(msg):
@@ -60,8 +69,11 @@ for i in range(8):
 
         elif choice == 2:
             print(" --- Let's understand Caesar cipher --- ")
-
+            msg = input("Enter a message you to want to cipher: ")
+            sp = int(input("Enter shift pattern: "))
+            caesar_cipher(msg, sp)
             break
+
         elif choice == 3:
             print(" --- Let's understand ROT 13 --- ")
             break
