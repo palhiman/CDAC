@@ -6,6 +6,7 @@
 - To run the script use following commands:
  
 `chmod +x scansploit.sh`
+
 `sudo ./scansploit.sh`
 
 - Requirements
