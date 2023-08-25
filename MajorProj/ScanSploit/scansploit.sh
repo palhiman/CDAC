@@ -17,8 +17,8 @@ BlueF='\e[1;34m'
 
 
 #Variable
-Version='2.1'
-Codename='Redline'
+Version='1.0'
+Codename='PG-DCSF'
 xterm='xterm -hold -fa monaco -fs 13 -bg black -e nmap'
 
 
@@ -30,7 +30,8 @@ sleep 1
 echo ""
 echo -e $yellow"[*] Thank You For Using ScanSploit  =)."
 echo ""
-echo -e $yellow"[*] ..........................."
+echo -e $yellow"[*] Give a star on Github (http://github.com/palhiman/CDAC.git)."
+echo -e $yellow"[*] Fork our project for contribution. (http://github.com/palhiman/CDAC.git)"
 exit
 }
 
@@ -319,7 +320,7 @@ function brutense	() {
 	    echo -e $white"	[$okegreen"70"$white]$cyan  xmpp-brute "
 	    echo -e $white"	[$okegreen"71"$white]$cyan  Back "
 	    echo -e " "
-	    echo -n -e $red'  \033[4mScreetsec@nse-brute:\033[0m>> '; tput sgr0 #insert your choice
+	    echo -n -e $red'  Enter your choice for BRUTE NSE Script from 1-71 >>> '; tput sgr0 #insert your choice
 	      	read Brute
 	             if test $Brute == '1'
 	          	then
@@ -821,7 +822,7 @@ clear
   echo -e $white"	[$okegreen"33"$white]$cyan x11-access	"
   echo -e $white"	[$okegreen"34"$white]$cyan Back "
   echo -e " "
-  echo -n -e $red'  \033[4mScreetsec@nse-auth:\033[0m>> '; tput sgr0 #insert your choice
+  echo -n -e $red'  Choose options for AUTH NSE script form 1-34 >>> '; tput sgr0 #insert your choice
            read win
         if test $win == '1'
           then
@@ -1124,7 +1125,7 @@ clear
   echo -e $white"	[$okegreen"42"$white]$cyan targets-ipv6-multicast-slaac	"
   echo -e $white"	[$okegreen"43"$white]$cyan targets-sniffer	"
   echo -e $white"	[$okegreen"44"$white]$cyan back	"
-  echo -n -e $red' Enter your choice from 1-44 >>> ' sgr0 #insert your choice
+  echo -n -e $red' Enter your choice for Broadcast NSE script from 1-44 >>> ' sgr0 #insert your choice
         read min
         if test $min == '1'
           then
@@ -1466,7 +1467,7 @@ clear
   echo -e $white"	[$okegreen"43"$white]$cyan supermicro-ipmi-conf "
   echo -e $white"	[$okegreen"44"$white]$cyan back "
   echo -e " "
-  echo -n -e $red'  Enter your choice from 1-44 >>> '; tput sgr0 #insert your choice
+  echo -n -e $red'  Enter your choices for Exploit NSE script from 1-44 >>> '; tput sgr0 #insert your choice
            read cin
         if test $cin == '1'
           then
@@ -1765,7 +1766,7 @@ function fuzzer () {
   echo -e $white"	[$okegreen"03"$white]$cyan File http-phpself-xss	"
   echo -e $white"	[$okegreen"04"$white]$cyan Back "
   echo -e " "
-  echo -n -e $red'  Enter your choice >>> '; tput sgr0 #insert your choice
+  echo -n -e $red'  Enter your choice for Fuzz from 1-4 >>> '; tput sgr0 #insert your choice
            read win
         if test $win == '1'
           then
@@ -1822,7 +1823,7 @@ function malware () {
   echo -e $white"	[$okegreen"09"$white]$cyan smtp-strangeport	"
 	echo -e $white"	[$okegreen"10"$white]$cyan back	"
 	echo
-  echo -n -e $red'  Enter your choice from 1-10 >>> '; tput sgr0 #insert your choice
+  echo -n -e $red'  Enter your choice for Malware NSE Script from 1-10 >>> '; tput sgr0 #insert your choice
            read malw
         if test $malw == '1'
           then
@@ -2576,7 +2577,7 @@ echo -e $red"  Nmap Script Engine - Advanced Scanning with Nmap Script "
 				echo -e $white"	[$okegreen"07"$white]$cyan  vuln-category "
 				echo -e $white"	[$okegreen"08"$white]$cyan  back to menu "
 				echo
-				echo -n -e $red'  Enter your choice from options abvoe >>> '; tput sgr0 #insert your choice
+				echo -n -e $red'  Enter your choice for NSE scripts  >>> '; tput sgr0 #insert your choice
 		      	read ceh
 		          if test $ceh == '1'
 		          	then
@@ -2853,7 +2854,7 @@ echo ""
     echo -e $white"	[$okegreen"11"$white]$cyan  COLLECTING VALID EMAIL ADDRES  "
     echo -e $white"	[$okegreen"12"$white]$cyan  BACK  "
     echo -e " "
-    echo -n -e $red'  Enter your choice from above options >>> '; tput sgr0 #insert your choice
+    echo -n -e $red'  Enter your choice for Web Service from above options >>> '; tput sgr0 #insert your choice
     read Scanning
     if test $Scanning == '1'
       then
@@ -2956,9 +2957,9 @@ echo -e "
 		             Credits To
 \033[31m##########################################################################\033[m"
 echo
-echo -e $white "Special thanks to:"
+echo -e $white "Special thanks to our mentor Dr. Priya Sajan, Assistant Professor, CDAC, TVM."
 echo
-echo -e $red "Dracos Linux ( www.dracos-linux.org )"
+echo -e $red " Kali Linux ( www.kali.org )"
 echo
 echo -e $okegreen "Offensive Security for the awesome OS"
 echo
@@ -2970,7 +2971,7 @@ echo -e $cyan "http://www.kitploit.com/"
 echo
 echo -e $white "http://www.linuxsec.org/"
 echo
-echo -e $okegreen "My Friend for helpme ( Boy Suganda )"
+echo -e $okegreen "My colleagues: Gopi, Harshit, Himanshu, Jyothilaxmi, Kailas & Vipul."
 echo
 echo -e $red "Big Thanks to : http://www.github.com/"
 echo
@@ -3006,7 +3007,7 @@ echo "   / /_/ | |  | \// __ \\  \___/     |    \  Y Y  \/ __ \|  |_> >";
 echo "   \____ | |__|  (____  /\___  >____|__  /__|_|  (____  /   __/ ";
 echo "        \/            \/     \/        \/      \/     \/|__|    ";
 echo ""
-echo -e $cyan"    Script by           $white":" $red Group-3 of PG-DCSF from CDAC, TVM "
+echo -e $cyan"    Script by           $white":" $red Team of Five (Jyothi,Kailas,Harshit,Gopi,Vipul,Himanshu) "
 echo -e $cyan"    Version             $white":" $red $Version  "
 echo -e $cyan"    Codename            $white":" $red $Codename "
 echo -e $cyan"    Follow me on Github $white":" $red @palhiman "
