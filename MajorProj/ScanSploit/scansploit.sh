@@ -3172,7 +3172,7 @@ echo -e $okegreen"    ========================================================= 
 		echo -e $white"	[$okegreen"11"$white]$cyan  CREDITS  "
 		echo -e $white"	[$okegreen"12"$white]$cyan  EXIT  "
 		echo -e " "
-		echo -n -e $red'  \033[4mScreetsec@dracmap-v2:\033[0m '; tput sgr0 #insert your choice
+		echo -n -e $red'  Enter your choice from the menu (1-10) '; tput sgr0 #insert your choice
 		read Dracnmap
 		if test $Dracnmap == '1'
       then
@@ -3248,7 +3248,7 @@ echo -e $okegreen"    ========================================================= 
 				echo ""
 				echo -e $yellow"[*] Thank You For Using ScanSploit  =)."
 				echo ""
-				echo -e $yellow"[*] .........................................."
+				echo -e $yellow"[*] Hope you learned something. Please give us some feedback."
         exit
 
  		else
