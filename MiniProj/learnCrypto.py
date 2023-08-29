@@ -3,6 +3,7 @@
 
 import sys
 import argparse
+import base64
 
 __doc__ = '''Welcome to the world of Cryptography.\nHere we will explore the basics of Cryptography.\nOur aim here is simple, that is, to help anyone specially beignners in understanding terms such as encryption, decryption, cipher, dicipher, etc.\nWe will be looking into few basic cryptographics algorithms such as: reverse cipher, Caesar cipher, ROT13, Base64 encryption, XOR cipher, Vignere cipher, RSA algorithms.\n'''
 
@@ -11,6 +12,8 @@ print(10 * "******")
 
 # reverse cipher (plain message)
 def reverse_cipher(msg):
+    __doc__ = '''This cipher uses a pattern of reversing the string of plain text to convert as cipher text. '''
+    print(__doc__)
     translated = '' # to store the cipher text
     i = len(msg) - 1
 
@@ -21,25 +24,45 @@ def reverse_cipher(msg):
     print(f"The cipher text is : {translated}")
 
 # Caesar cipher (plain message and shift pattern)
-def caesar_cipher(msg, sp): 
-   result = '' # to store the cipher text
-   for i in range(len(msg)):
-       char = msg[i]
-       if (char.isupper()):
-           result += chr((ord(char) + sp - 65) % 26 + 65) # encrypt upper case letters
-       else:
-           result += chr((ord(char) + sp - 97) % 26 + 97) # encrypt lower case letters
+def caesar_cipher(msg, sp):
+    __doc__ = '''A simple type of subsitution cipher.
+    Each letter of plain text is replaced by a letter with some fixed number of positions down with alphabet.
+    '''
+    print(__doc__)
+    result = '' # to store the cipher text
+    for i in range(len(msg)):
+        char = msg[i]
+        if (char.isupper()):
+            result += chr((ord(char) + sp - 65) % 26 + 65) # encrypt upper case letters
+        else:
+            result += chr((ord(char) + sp - 97) % 26 + 97) # encrypt lower case letters
        
-   print(result)
+    print(f"The resulting cipher text: {result}")
 
 
 # ROT 13
 def rot13(msg):
-    pass
+    __doc__= '''Special case of Caesar cipher where shift pattern is 13.'''
+    print(__doc__)
+    sp = 13 # shift pattern
+    caesar_cipher(msg, sp)
 
 # Base64 encoding and decoding
-def base64(msg):
-    pass
+def base64_encode(msg):
+    __doc__ = '''Converts binary data into Text format. Primarily used email encryption.
+    Also called as Privacy enhanced Electronic Mail (PEM).
+    '''
+    encoded_data = base64.b64encode(msg)
+    print(f"Encoded text with base64 : {encoded_data}")
+
+
+# Base 64 decoding
+def base64_decode(msg):
+    __doc__ = ''''''
+    print(__doc__)
+    
+    decoded_data = base64.b64decode(msg)
+    print(f"Decoded text using base64: {decoded_data}")
 
 # XOR cipher
 def xor_cipher(msg):
@@ -76,10 +99,28 @@ for i in range(8):
 
         elif choice == 3:
             print(" --- Let's understand ROT 13 --- ")
+            msg = input("Enter a message you to want to cipher:")
+            rot13(msg)
             break
         elif choice == 4:
             print(" --- Let's understand Base64 Encoding and Decoding --- ")
+
+            print("What you want to do:\n")
+            print("1. Base64 Encoding\n 2. Base64 Decoding")
+            option = int(input("Select from above option: >>>"))
+            if option == 1:
+                print("--- Base64 encoding ----")
+                msg = input("Enter a message you want to encode using base64: ")
+                base64_encode(msg)
+                break
+
+            elif option == 2:
+                print("--- Base64 Decoding ---")
+                msg = input("Enter text you want to decode using base64 : ")
+                base64_decode(msg)
+                break
             break
+
         elif choice == 5:
             print(" --- Let's understand XOR cipher ---")
             break
