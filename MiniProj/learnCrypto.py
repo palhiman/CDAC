@@ -4,6 +4,8 @@
 import sys
 import argparse
 import base64
+from os import urandom
+
 
 __doc__ = '''Welcome to the world of Cryptography.\nHere we will explore the basics of Cryptography.\nOur aim here is simple, that is, to help anyone specially beignners in understanding terms such as encryption, decryption, cipher, dicipher, etc.\nWe will be looking into few basic cryptographics algorithms such as: reverse cipher, Caesar cipher, ROT13, Base64 encryption, XOR cipher, Vignere cipher, RSA algorithms.\n'''
 
@@ -65,8 +67,32 @@ def base64_decode(msg):
     print(f"Decoded text using base64: {decoded_data}")
 
 # XOR cipher
+
+def genkey(length: int) -> bytes:
+    ''' Generate key.'''
+    return urandom(length)
+
+def xor_strings(s, t) -> bytes:
+    ''' Concate xor two strings together.'''
+    if isinstance(s, str):
+        # text strings contain single characters
+        return "".join(chr(ord(a) ^ b) for a, b in zip(s, t)).encode('utf-8')
+    else:
+        # bytes objects contain integer values in the range 0-255
+        return bytes([a ^ b for a, b in zip(s, t)])
+
+
 def xor_cipher(msg):
-    pass
+    __doc__ = '''the simple XOR cipher is a type of additive cipher,[1] an encryption algorithm. XOR is nothing but exclusive disjunction. This algorith requires two parameters, first being plain text and other being key.
+    '''
+    print(__doc__)
+    
+    key = genkey(len(msg))
+    print(f'Key: {key}')
+
+    cipher_text = xor_strings(msg.encode('utf-8'), key)
+    print(f"Converted cipher text is : {cipher_text}")
+
 
 # Vignere cipher
 def vignere_cipher(msg):
@@ -123,6 +149,8 @@ for i in range(8):
 
         elif choice == 5:
             print(" --- Let's understand XOR cipher ---")
+            msg = input("Enter a message for converting to cipher text: ")
+            xor_cipher(msg)
             break
         elif choice == 6:
             print(" --- Let's understand Vignere cipher --- ")
