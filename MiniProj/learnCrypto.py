@@ -96,7 +96,10 @@ def xor_cipher(msg):
 
 # Vignere cipher
 def vignere_cipher(msg):
-    pass
+    __doc__ = '''The Vignere cipher is a method of encrypting alphabetic text where each letter of the plaintext is encoded with a different Caesar cipher, whose increment is determined by the corresponding letter of another text, the key.
+    '''
+    print(__doc__)
+    
 
 # RSA algorithm
 def rsa(msg):
