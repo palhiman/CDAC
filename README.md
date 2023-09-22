@@ -23,8 +23,9 @@ sudo ./scansploit.sh
 
 
 # Mini Project
-> Title: Learning cryptography using python.
->>> Objective: Cryptography is one of the important tool in any hackers toolbox. This python script will help beginners in understanding the basics of cryptography. Here we will implement cryptographic algorithms such as reverse cipher, Caesar cipher, ROT13, Base64 encoding and decoding, XOR process, Vignere cipher, RSA algorithm.
+## Title: Learning cryptography using python.
+### Objective
+ Cryptography is one of the important tool in any hackers toolbox. This python script will help beginners in understanding the basics of cryptography. Here we will implement cryptographic algorithms such as reverse cipher, Caesar cipher, ROT13, Base64 encoding and decoding, XOR process, Vignere cipher, RSA algorithm.
 
 ### How to execute this python script ?
 ```
